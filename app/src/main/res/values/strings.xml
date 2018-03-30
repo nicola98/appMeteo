@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">appMeteo</string>
+    <string name="add">add</string>
+    <string name="name">nome città</string>
+    <string name="save">salva</string>
+    <string name="indietro">back</string>
 </resources>
