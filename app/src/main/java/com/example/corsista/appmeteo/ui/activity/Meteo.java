@@ -42,19 +42,7 @@ public class Meteo  extends AppCompatActivity {
         tempo_view = (TextView) findViewById(R.id.tempo);
         Intent intent = getIntent();
         final int dato = intent.getIntExtra("position", 0);
-        /*JsonObjectRequest jsonObjectReq = new JsonObjectRequest("http://api.openweathermap.org/data/2.5/weather?q="+ MainSingleton.getInstance().getItemList().get(dato).getName() +"&appid=2439d518e81cee90fd7a61cfe1109dd4", null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        Log.d("SERVICE", "Response: " + response.toString());
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                VolleyLog.d("VOLLEY", "Error: " + error.getMessage());
-            }
-        });
-        ServiceQueueSingleton.getInstance(this).addToRequestQueue(jsonObjectReq);*/
+
         GsonRequest jsonObjectReq = new GsonRequest("http://api.openweathermap.org/data/2.5/weather?q="+ MainSingleton.getInstance().getItemList().get(dato).getName() +"&appid=2439d518e81cee90fd7a61cfe1109dd4",
                 WeatherOutput.class, null,
                 new Response.Listener<WeatherOutput>() {

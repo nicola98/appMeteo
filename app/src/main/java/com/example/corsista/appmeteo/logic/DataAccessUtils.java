@@ -41,6 +41,7 @@ public class DataAccessUtils {
 
     public static void initDataSource(Context context) {
         if(getDataSourceItemList(context) == null || getDataSourceItemList(context).size() == 0){
+            addItemToDataSource(context, new Citta ("posizione corrente"));
             addItemToDataSource(context, new Citta("Milano"));
             addItemToDataSource(context, new Citta("Roma"));
             addItemToDataSource(context, new Citta("Firenze"));
